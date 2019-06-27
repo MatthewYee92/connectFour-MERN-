@@ -1,18 +1,16 @@
 const createEmptyTable = () =>
-  new Array(8).fill(null).map(
-    () => new Array(6).fill(null)
+  new Array(6).fill(null).map(
+    () => new Array(7).fill(0)
 );
+
+  
 
 // the above shoud look like this 
 // (8)[Array(6), Array(6), Array(6), Array(6), Array(6), Array(6), Array(6), Array(6)]
 // 0 (6)[null, null, null, null, null, null]
 // 1 (6)[null, null, null, null, null, null]
-// 2 (6)[null, null, null, null, null, null]
-// 3 (6)[null, null, null, null, null, null]
-// 4 (6)[null, null, null, null, null, null]
-// 5 (6)[null, null, null, null, null, null]
-// 6 (6)[null, null, null, null, null, null]
-// 7 (6)[null, null, null, null, null, null]
+// and so on for a couple more
+
 
 
 let table = createEmptyTable() //?
@@ -45,3 +43,25 @@ const checkRows = table => {
 
 const checkTable = table => checkRows(table) || checkColumns(table)
 
+
+
+function doubleAfter2Seconds(x) {
+    return new Promise(resolve => {
+      setTimeout(() => {
+        resolve(x * 2);
+      }, 2000);
+    });
+  }
+  
+  async function addAsync(x) {
+    const a = await doubleAfter2Seconds(10);
+    const b = await doubleAfter2Seconds(20);
+    const c = await doubleAfter2Seconds(30);
+    return x + a + b + c;
+  }
+  
+  
+  addAsync(10).then((sum) => {
+    console.log(sum);
+  });
+  

@@ -5,7 +5,7 @@ class Board extends React.Component {
   renderSquare(i) {
     return <Square />;
   }
-
+  
   render() {
     const status = "connect 4";
 
