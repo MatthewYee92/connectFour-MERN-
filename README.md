@@ -1,4 +1,4 @@
-# connectFour-MERN-
+# connectFour
 connectFour game in react, express.js, mysql
 
 
