@@ -27,7 +27,7 @@
   },
   "dependencies": {
     "array-2d-js": "^1.0.1",
-    "express": "^4.17.1",
+    "express": "^4.18.2",
     "live-server": "^1.2.1",
     "mysql": "^2.17.1",
     "nodemon": "^1.19.1",
